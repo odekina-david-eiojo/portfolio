@@ -49,20 +49,14 @@ body {
 /* ---------- SKIP LINK ---------- */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--accent);
-  color: var(--bg-dark);
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 0 0 var(--border-radius) 0;
-  font-weight: bold;
-  z-index: 100;
-}
-.skip-link:focus {
   top: 0;
-  outline: 3px solid var(--accent-light);
-  outline-offset: 2px;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 /* ---------- TYPOGRAPHY & LINKS ---------- */
@@ -84,7 +78,17 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 4p.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}x;
 }
 :focus-visible {
   outline: 3px solid var(--accent);
@@ -458,4 +462,14 @@ footer a:hover {
   .section p {
     max-width: none;
   }
+}
+
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
 }
